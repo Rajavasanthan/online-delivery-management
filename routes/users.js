@@ -3,6 +3,7 @@ var router = express.Router();
 var { User } = require("../model/user");
 var bcrypt = require("bcryptjs");
 var jwt = require("jsonwebtoken");
+var userOrderRoute = require("./order/order");
 /* GET users listing. */
 router.post("/register", async function (req, res, next) {
   req.body.userType = "USER";
@@ -60,5 +61,7 @@ router.post("/login", async function (req, res) {
     });
   }
 });
+
+router.use("/order", userOrderRoute);
 
 module.exports = router;
