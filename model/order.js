@@ -33,18 +33,18 @@ const OrderSchema = mongoose.Schema({
     type: String,
   },
   deliveryCharge: {
-    type: Number
+    type: Number,
   },
-  user : {
-       type : mongoose.Types.ObjectId,
-       ref : "user"
+  user: {
+    type: mongoose.Types.ObjectId,
+    ref: "user",
   },
-  createdAt : {
-       type : Date,
-       default : new Date()
-  }
+  createdAt: {
+    type: Date,
+    default: new Date(),
+  },
 });
 
 const Order = mongoose.model("order", OrderSchema);
 
-module.exports = {Order}
+module.exports = { Order };

@@ -1,6 +1,5 @@
 var express = require("express");
-const authenticate = require("../../library/authenticate");
-const { permit } = require("../../library/authenticate");
+const {authenticate,permit} = require("../../library/authenticate");
 var router = express.Router();
 var {Order} = require("../../model/order");
 
