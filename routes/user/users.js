@@ -51,7 +51,7 @@ router.post("/login", async function (req, res) {
           }
         );
       } else {
-        res.status(200).json({
+        res.status(401).json({
           message: "Password Wrong",
         });
       }
